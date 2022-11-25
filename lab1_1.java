@@ -13,16 +13,17 @@ import java.util.Scanner;
     in.close();
     
     if (year > 2022 || year < 0){
-      System.out.print("Неверно введённый год");
+      System.out.print(" Неверно введённый год ");
      }
     if (month > 12 || month < 1){
-      System.out.print("Неверно введённый месяц");
+      System.out.print(" Неверно введённый месяц ");
      }
     if (day > 31){
-      System.out.print("Неверно введённый день");
+      System.out.print(" Неверно введённый день ");
      }
     
       
+    else {
     int day0user = (year*365 + month*12 + day)%30;
 
     int year0user;
@@ -41,5 +42,6 @@ import java.util.Scanner;
       
         
     System.out.println(year0user + " лет " + month0user + " месяцев " + day0user + " дней ");
+     }
   }
 }
