@@ -10,29 +10,32 @@ public class lab1_2 {
     
     System.out.println("Введите день: ");
     int day = numbers.nextInt();
-    
-    if  ((month <= 5) && (month >= 3)){
-      System.out.println("Весна");
-    }
-      if ((month <= 6) && (month >= 8)){
-       System.out.println("Лето");
-      }
-       if ((month >= 9) && (month <= 11)){
-         System.out.println("Осень");
+
+    if ((day > 30) && (month != 1) && (month != 3) && (month != 5) && (month != 7) && (month != 8) && (month != 10) && (month != 12)){
+        System.out.print("В этом месяце не может быть данное количество дней");
        }
-         if (month == 12 || month == 1 || month == 2){ 
-         System.out.println("Зима");
+      
+    if (day > 31 || day < 0 || month > 12 || month < 1){
+           System.out.print("Неверно заданные значения");
          }
-           if ((day > 30) && (month != 1) && (month != 3) && (month != 5) && (month != 7) && (month != 8) && (month != 10) && (month != 12)){
-            System.out.print("В этом месяце не может быть данное количество дней");
-           }
-             if ((day > 31)){
-               System.out.print("Месяцев с таким количеством дней не существует");
-             }
-    if ((month > 12)){
-      System.out.print("Месяца с таким номером не существует");
+     
+  else {
+    if  ((month <= 5) && (month >= 3)){
+      System.out.println(" Весна ");
     }
-    
-    
+
+      if ((month >= 6) && (month <= 8)){
+       System.out.println(" Лето ");
+      }
+
+       if ((month >= 9) && (month <= 11)){
+         System.out.println(" Осень ");
+       }
+
+         if (month == 12 || month == 1 || month == 2){ 
+         System.out.println(" Зима ");
+         }
+    }
+      
   }
 }
